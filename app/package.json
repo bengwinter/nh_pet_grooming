@@ -1,0 +1,14 @@
+{
+  "name": "Newton Highlands Pet & Grooming Boutique",
+  "description": "Newton Highlands Pet and Grooming Boutique Company Website",
+  "author": "Ben Winter <ben@julycamp.com>",
+  "dependencies": {
+    "browserify": "^8.1.1",
+    "less": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bengwinter/nh_pet_grooming"
+  },
+  "engine": "node 0.10.33"
+}
