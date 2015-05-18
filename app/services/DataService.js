@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('templateProjectName').factory('DataService',
+angular.module('nhPet').factory('DataService',
   function($http, $rootScope, $location) {
     var Service = function() {};
 

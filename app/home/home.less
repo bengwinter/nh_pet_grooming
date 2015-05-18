@@ -3,14 +3,235 @@
 @import url("../styles/animations.less");
 @import url("../styles/breakpoints.less");
 
-#home-section {
-  background-color: @blue;
-  text-align: center;
-  font-size: 25px;
+.section {
+  background-color: @white;
 
-  #opening-text {
-    h1 {
+  .section-header {
+    font-family: 'Parisish';
+    font-size: 36px;
+    text-decoration: underline;
+    margin-bottom: 50px;
+  }
+}
+
+.short-section {
+  height: 430px;
+}
+
+.medium-section {
+  padding-top: 50px;
+  height: 500px;
+}
+
+.large-section {
+  padding-top: 55px;
+  height: 550px;
+}
+
+
+
+#landing-page {
+  background-image: url("../images/photographs/landing.jpg");
+  background-size: cover;
+  background-position: center;
+  font-size: 54px;
+
+  .company-name-header {
+    font-family: 'Parisish';
+    font-size: 100%;
+    color: @white;
+
+    .breakpoint-medium({
+      font-size: 150%;
+    });
+    span {
+      display: block;
+    }
+  }
+
+}
+
+#about-summary {
+  color: @black;
+  padding-top: 150px;
+
+  img {
+    height: 100px;
+  }
+  h2 {
+    font-family: 'Parisish';
+    font-size: 20px;
+
+    .breakpoint-medium({
+      font-size: 150%;
+    });
+
+    span {
+      display: block;
+    }
+  }
+
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+  }
+}
+
+#transition-one {
+  padding-top: 150px;
+  background-image: url("../images/photographs/quote.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  h5 {
+    font-family: 'Open Sans', sans-serif;
+    color: @pink;
+  }
+
+  .quote {
+    font-size: 30px;
+  }
+
+  .quote-author {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+#about-jane {
+  color: @black;
+
+  img {
+    height: 200px;
+    margin-top: 25px;
+  }
+
+  h3 {
+    font-family: 'Parisish';
+    font-size: 30px;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+  }
+}
+
+#offerings-page {
+  
+  background-image: url("../images/photographs/offerings.jpg");
+  background-size: cover;
+  background-position: center;
+
+
+
+  .offering-section {
+    h4 {
+      font-family: 'Axis';
+      font-size: 16px;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+    }
+  }
+}
+
+
+#philosophy-page {
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+
+}
+
+
+#gallery-page {
+  h6 {
+    font-family: 'Parisish';
+    font-size: 30px;
+  }
+}
+
+
+#contact-page {
+  .contact-method {
+    margin-bottom: 10px;
+
+    p {
+      font-family: 'Axis';
+      font-size: 18px;
+      display: inline;
+      vertical-align: middle;
+    }
+
+    a {
+      color: @pink;
+    }
+
+    .black-paw {
+      margin-left: 5px;
+      display: inline;
+      height: 25px;
+    }
+  }
+  
+}
+
+
+#map-section {
+  h6 {
+    font-family: 'Parisish';
+    font-size: 30px;
+  }
+}
+
+
+#bottom-bar {
+  h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    display: inline;
+    padding: 5px 20px;
+  }
+
+  .contact-icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: @icon_pink;
+    border-radius: 100px;
+    text-align: center;
+    vertical-align: middle;
+    
+    a {
       color: @white;
+      font-size: 24px;  
+      i {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  .contact-icon:hover {
+    background-color: @icon_pink_hover;
+    cursor: pointer;
+  }
+
+  .powered-by {
+    font-family: 'Axis';
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    a {
+      color: @black;
     }
   }
 }

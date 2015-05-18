@@ -1,5 +1,5 @@
 angular
-  .module('templateProjectName')
+  .module('nhPet')
     .directive('disableAnimation', function($animate){
     return {
         restrict: 'A',

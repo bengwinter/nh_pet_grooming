@@ -26,8 +26,7 @@ angular
               'height': (newValue.h * percentage) + 'px',
               'width': (newValue.w) + 'px',
               'padding-top': (newValue.h * percentage * paddingTopPercentage * mobilePaddingPercentage) + 'px',
-              'padding-bottom': (newValue.h * percentage * paddingBottomPercentage * mobilePaddingPercentage) + 'px',
-              'min-height': (newValue.h * percentage) + 'px'
+              'padding-bottom': (newValue.h * percentage * paddingBottomPercentage * mobilePaddingPercentage) + 'px'
             };
           };
                 
