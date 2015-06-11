@@ -6,8 +6,8 @@
 <div class="row section short-section" id="about-summary">
   <div class="col-xs-6 col-xs-offset-3 text-center">
     <img ng-src="../images/illustrations/dog.svg"/>
-    <h2 class="company-name-header">Newton Highlands<span>GROOMING & PET BOUTIQUE</span></h2>
-    <p>is a full service pet salon located in Newton Highlands off of Boylston street. We provide washes, trims and many other service offerings. We also have a fully stocked supploy of toys and other things that you may need.</p>
+    <h2 class="company-name-header">Newton Highlands<span>GROOMING</span></h2>
+    <p> offers gentle grooming for dogs and cats in an intimate environment. Two-time winner of Best of Boston, we have chosen to remain a small shop. This has allowed us to continue to give your pet the personal attention that we have come to be known for.</p>
   </div>
 </div>
 <div class="row section short-section" id="transition-one">
@@ -17,42 +17,39 @@
   </div>
 </div>
 <div class="row section medium-section" id="about-jane">
-  <div class="col-xs-5 text-right">
+  <div class="col-xs-5 text-right vertical-align-container">
     <img ng-src="../images/photographs/jane.png"/>
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-6 vertical-align-container">
     <h3>JANE BRUCE</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Jane Bruce has been an animal lover her entire life, and has been fortunate enough to have found her true calling more than 20 years ago. In 1998, she had the great opportunity to purchase an existing pet grooming shop and make it her own. This has enabled her to combine her artistic side with her love of all things furry.</p>
   </div>
 </div>
 <div class="row section medium-section" id="offerings-page">
   <div class="col-xs-12 text-center">
     <h3 class="section-header">OUR OFFERINGS</h3>
   </div>
+  <div class="col-xs-10 col-xs-offset-1 text-center">
+    <p>{{offeringSelected}}</p>
+  </div>
   <div class="col-xs-2 col-xs-offset-3 offering-section">
-    <h4>FOR DOGS</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h4 class="offering-button">FOR DOGS</h4>
   </div>
   <div class="col-xs-2 offering-section">
-    <h4>FOR CATS</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h4 class="offering-button">FOR CATS</h4>
   </div>
   <div class="col-xs-2 offering-section">
-    <h4>FOR EVERYONE</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h4 class="offering-button">FOR EVERYONE</h4>
   </div>
 </div>
 <div class="row section large-section" id="philosophy-page">
   <div class="col-xs-12 text-center">
     <h3 class="section-header">OUR PHILOSOPHY</h3>
   </div>
-  <div class="col-xs-7 col-xs-offset-1">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="col-xs-7 col-xs-offset-1 vertical-align-container">
+    <p>With over 20 years of grooming experience our goal is to help educate our clients on the proper care of their cherished pets. This enables them to spot problems and potential health issues.</br></br>We strive to get to know you and your pet so that we can accommodate any special needs and provide that level of unique attention that both you and your pet deserve.</br></br>All animals are treated with kindness and respect. Our policy puts all dogs’ health and comfort above cosmetics and aesthetics.  If we deem the coat is too matted, the only humane thing to do is a short clip. We will NEVER hurt an animal to save the coat.</p>
   </div>
-  <div class="col-xs-3">
+  <div class="col-xs-3 vertical-align-container">
     <img ng-src="../images/logo/logo_circle.svg"/>
   </div>
 </div>
@@ -91,7 +88,7 @@
   <div class="col-xs-12 text-center subsection-header">
     <h6>Or stop in and say hello!</h6>
   </div>
-  <div class="col-xs-12">
+  <div class="col-xs-12" id="map">
   </div>
 </div>
 <div class="row section" id="bottom-bar">
