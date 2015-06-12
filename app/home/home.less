@@ -19,12 +19,10 @@
 }
 
 .medium-section {
-  padding-top: 50px;
   height: 500px;
 }
 
 .large-section {
-  padding-top: 55px;
   height: 550px;
 }
 
@@ -33,13 +31,27 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.angular-center-container {
+  height:100%;
+  width:100%;
+  display:table;
+  pointer-events: none;
+  z-index:9999;
+}
+.angular-centered {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
   
 
 #landing-page {
   background-image: url("../images/photographs/landing.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 125%;
+  background-position: 50% 0px;
   font-size: 54px;
+  background-repeat: no-repeat;
 
   .company-name-header {
     font-family: 'Parisish';
@@ -58,7 +70,6 @@
 
 #about-summary {
   color: @black;
-  padding-top: 150px;
 
   img {
     height: 100px;
@@ -84,11 +95,10 @@
 }
 
 #transition-one {
-  padding-top: 150px;
   background-image: url("../images/photographs/quote.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
 
   h5 {
     font-family: 'Open Sans', sans-serif;
@@ -167,7 +177,7 @@
 
 #contact-page {
   .contact-method {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     p {
       font-family: 'Axis';
@@ -195,10 +205,24 @@
     font-family: 'Parisish';
     font-size: 30px;
   }
+
+  #map {
+    background-position: center;
+    background-size: cover;
+    background-image: url('http://api.tiles.mapbox.com/v4/mapbox.streets-basic/pin-l-dog-park+c091e6(-71.212660074234,42.31913734412221,17)/-71.212660074234,42.31913734412221,17/1280x1280.png?access_token=pk.eyJ1IjoiaGVucnlraWVseSIsImEiOiJ1czZCVkFVIn0.5CwMFCLWHzwFhxpt5XtCDg');
+  }
+
+  #map-text {
+    background-color: rgba(255, 255, 255, .8);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
 
 
 #bottom-bar {
+  padding-top: 2%;
   h6 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;

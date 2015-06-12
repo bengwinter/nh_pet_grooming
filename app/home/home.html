@@ -1,57 +1,69 @@
-<div class="row section" id="landing-page" ng-style="setHeightWidthAndPadding(1, .35, .2, 1)" resize >
-  <div class="col-xs-12 text-center">
+<div class="row section" id="landing-page" ng-style="setHeightWidthAndPadding(1.0, .35, 0, 0)" resize>
+  
+  <div class="col-xs-12 text-center" perfect-parallax parallax-ratio="-.3" parallax-css="margin-top">
     <h1 class="company-name-header">Newton Highlands<span>GROOMING & PET BOUTIQUE</span></h1>
   </div>
+
 </div>
-<div class="row section short-section" id="about-summary">
-  <div class="col-xs-6 col-xs-offset-3 text-center">
-    <img ng-src="../images/illustrations/dog.svg"/>
-    <h2 class="company-name-header">Newton Highlands<span>GROOMING</span></h2>
-    <p> offers gentle grooming for dogs and cats in an intimate environment. Two-time winner of Best of Boston, we have chosen to remain a small shop. This has allowed us to continue to give your pet the personal attention that we have come to be known for.</p>
-  </div>
+<div class="row section short-section" id="about-summary" perfect-parallax parallax-ratio="-.9" parallax-css="margin-top">
+  <centered>
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <img ng-src="../images/illustrations/dog.svg"/>
+      <h2  class="company-name-header">Newton Highlands<span>GROOMING</span></h2>
+      <p > offers gentle grooming for dogs and cats in an intimate environment. Two-time winner of Best of Boston, we have chosen to remain a small shop. This has allowed us to continue to give your pet the personal attention that we have come to be known for.</p>
+    </div>
+  </centered>
 </div>
-<div class="row section short-section" id="transition-one">
-  <div class="col-xs-10 col-xs-offset-1 text-center">
-    <h5 class="quote">"Our perfect companions never have fewer than four feet."</h5>
-    <h5 class="quote-author">-Sidonie-Gabrielle Colette</h5>
-  </div>
+<div class="row section short-section" id="transition-one" perfect-parallax parallax-ratio="-.9" parallax-css="background-position-y" parallax-init-val="-20">
+  <centered>
+    <div class="col-xs-10 col-xs-offset-1 text-center">
+      <h5 class="quote">"Our perfect companions never have fewer than four feet."</h5>
+      <h5 class="quote-author">-Sidonie-Gabrielle Colette</h5>
+    </div>
+  </centered>
 </div>
 <div class="row section medium-section" id="about-jane">
-  <div class="col-xs-5 text-right vertical-align-container">
-    <img ng-src="../images/photographs/jane.png"/>
-  </div>
-  <div class="col-xs-6 vertical-align-container">
-    <h3>JANE BRUCE</h3>
-    <p>Jane Bruce has been an animal lover her entire life, and has been fortunate enough to have found her true calling more than 20 years ago. In 1998, she had the great opportunity to purchase an existing pet grooming shop and make it her own. This has enabled her to combine her artistic side with her love of all things furry.</p>
-  </div>
+  <centered>
+    <div class="col-xs-5 text-right vertical-align-container" >
+      <img ng-src="../images/photographs/jane.png"/>
+    </div>
+    <div class="col-xs-6 vertical-align-container text-left">
+      <h3>JANE BRUCE</h3>
+      <p>Jane Bruce has been an animal lover her entire life, and has been fortunate enough to have found her true calling more than 20 years ago. In 1998, she had the great opportunity to purchase an existing pet grooming shop and make it her own. This has enabled her to combine her artistic side with her love of all things furry.</p>
+    </div>
+  </centered>
 </div>
 <div class="row section medium-section" id="offerings-page">
-  <div class="col-xs-12 text-center">
-    <h3 class="section-header">OUR OFFERINGS</h3>
-  </div>
-  <div class="col-xs-10 col-xs-offset-1 text-center">
-    <p>{{offeringSelected}}</p>
-  </div>
-  <div class="col-xs-2 col-xs-offset-3 offering-section">
-    <h4 class="offering-button">FOR DOGS</h4>
-  </div>
-  <div class="col-xs-2 offering-section">
-    <h4 class="offering-button">FOR CATS</h4>
-  </div>
-  <div class="col-xs-2 offering-section">
-    <h4 class="offering-button">FOR EVERYONE</h4>
-  </div>
+  <centered>
+    <div class="col-xs-12 text-center">
+      <h3 class="section-header">OUR OFFERINGS</h3>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 text-center">
+      <p>{{offeringSelected}}</p>
+    </div>
+    <div class="col-xs-2 col-xs-offset-3 offering-section">
+      <h4 class="offering-button">FOR DOGS</h4>
+    </div>
+    <div class="col-xs-2 offering-section">
+      <h4 class="offering-button">FOR CATS</h4>
+    </div>
+    <div class="col-xs-2 offering-section">
+      <h4 class="offering-button">FOR EVERYONE</h4>
+    </div>
+  </centered>
 </div>
 <div class="row section large-section" id="philosophy-page">
-  <div class="col-xs-12 text-center">
-    <h3 class="section-header">OUR PHILOSOPHY</h3>
-  </div>
-  <div class="col-xs-7 col-xs-offset-1 vertical-align-container">
-    <p>With over 20 years of grooming experience our goal is to help educate our clients on the proper care of their cherished pets. This enables them to spot problems and potential health issues.</br></br>We strive to get to know you and your pet so that we can accommodate any special needs and provide that level of unique attention that both you and your pet deserve.</br></br>All animals are treated with kindness and respect. Our policy puts all dogs’ health and comfort above cosmetics and aesthetics.  If we deem the coat is too matted, the only humane thing to do is a short clip. We will NEVER hurt an animal to save the coat.</p>
-  </div>
-  <div class="col-xs-3 vertical-align-container">
-    <img ng-src="../images/logo/logo_circle.svg"/>
-  </div>
+  <centered>
+    <div class="col-xs-12 text-center">
+      <h3 class="section-header">OUR PHILOSOPHY</h3>
+    </div>
+    <div class="col-xs-7 col-xs-offset-1 vertical-align-container">
+      <p>With over 20 years of grooming experience our goal is to help educate our clients on the proper care of their cherished pets. This enables them to spot problems and potential health issues.</br></br>We strive to get to know you and your pet so that we can accommodate any special needs and provide that level of unique attention that both you and your pet deserve.</br></br>All animals are treated with kindness and respect. Our policy puts all dogs’ health and comfort above cosmetics and aesthetics.  If we deem the coat is too matted, the only humane thing to do is a short clip. We will NEVER hurt an animal to save the coat.</p>
+    </div>
+    <div class="col-xs-3 vertical-align-container">
+      <img ng-src="../images/logo/logo_circle.svg"/>
+    </div>
+  </centered>
 </div>
 <div class="row section" id="gallery-page">
   <div class="col-xs-12 text-center subsection-header">
@@ -61,7 +73,8 @@
     <h6>Gallery</h6>
   </div>
 </div>
-<div class="row section" id="contact-page">
+<div class="row section short-section" id="contact-page">
+  <centered>
   <div class="col-xs-5 col-xs-offset-2 text-left">
     <div class="contact-method">
       <img class="black-paw" ng-src="../images/icons/paw_faceup_black.svg"/>
@@ -83,19 +96,27 @@
   <div class="col-xs-5">
     <h6>Contact Form</h6>
   </div>
+  </centered>
 </div>
 <div class="row section" id="map-section">
   <div class="col-xs-12 text-center subsection-header">
     <h6>Or stop in and say hello!</h6>
   </div>
-  <div class="col-xs-12" id="map">
-  </div>
+    <div class="col-xs-12" id="map">
+      <div class="row">
+        <div class="col-xs-5 short-section" id="map-text">
+          <centered>
+            <p class="text-left">We are located on the corner of Route 9 Westbound and Woodward Street. There is a small parking lot located behind my shop. It is accessible from Rt. 9 Westbound, or from Woodward. The Woodward Street entrance has an arrow marking it as an exit but it has always been used as an entrance as well.</p>
+          </centered>
+        </div>
+      </div>
+    </div>
 </div>
 <div class="row section" id="bottom-bar">
   <div class="col-xs-12 text-center">
     <h6>9 WOODLAND STREET, NEWTON HIGHLANDS, MA</h6>
     <h6>(617) 630-8449</h6>
-    <h6>Jane@newtonhighlandsgrooming.com</h6>
+    <h6>JANE@NEWTONHIGHLANDSGROOMING.COM</h6>
   </div>
   <div class="col-xs-12 text-center">
     <div class="contact-icon" ng-repeat="method in contactIcons">

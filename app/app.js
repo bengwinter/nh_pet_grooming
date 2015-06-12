@@ -8,7 +8,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'perfectParallax'
   ])
   .config(function ($routeProvider, $httpProvider) {
 

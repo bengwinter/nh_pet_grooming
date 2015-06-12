@@ -1,5 +1,7 @@
 ./directives/disable-animation.js
 ./directives/resize.js
+./directives/angular-centered.js
+./directives/angular-parallax.js
 ./directives/form-errors.js
 ./services/TextLookup.js
 ./services/DataService.js
