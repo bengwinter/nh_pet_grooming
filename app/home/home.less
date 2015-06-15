@@ -3,102 +3,167 @@
 @import url("../styles/animations.less");
 @import url("../styles/breakpoints.less");
 
+
+//none section specific styling
 .section {
   background-color: @white;
+  font-size: 16px;
 
-  .section-header {
-    font-family: 'Parisish';
-    font-size: 36px;
-    text-decoration: underline;
-    margin-bottom: 50px;
-  }
+  .breakpoint-medium({
+    font-size: 20px;
+  });
+  
+  .breakpoint-large({
+    font-size: 24px;
+  });
 }
 
 .short-section {
   height: 430px;
+
+  .breakpoint-small({
+    height: 430px;
+  });
+  
+  .breakpoint-medium({
+    height: 430px;
+  });
 }
 
 .medium-section {
   height: 500px;
+
+  .breakpoint-small({
+    height: 500px;
+
+  });
+  
+  .breakpoint-medium({
+    height: 500px;
+  });
 }
 
 .large-section {
   height: 550px;
+
+  .breakpoint-small({
+    height: 550px;
+
+  });
+  
+  .breakpoint-medium({
+    height: 550px;
+  });
 }
 
-.vertical-align-container {
-  float: none;
-  display: inline-block;
-  vertical-align: middle;
-}
+
 
 .angular-center-container {
   height:100%;
   width:100%;
+  // pointer-events: none;
   display:table;
-  pointer-events: none;
   z-index:9999;
 }
+
 .angular-centered {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
+
+
+//generic font styling
+
+.regular-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+
+.section-header {
+  font-family: 'Parisish';
+  font-size: 200%;
+  margin-bottom: 5%;
+  color: @black;
+
+  .breakpoint-medium({
+    margin-bottom: 50px;
+  });
+}
+
+.subsection-header {
+  font-family: 'Parisish';
+  color: @black;
+  font-size: 150%;
+}
+
+.axis-font {
+  font-family: 'Axis' !important;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.company-name-header {
+  font-family: 'Parisish';
   
+  color: @white;
+  .breakpoint-small({
+    font-size: 150%;
+  });
+
+  .breakpoint-medium({
+    font-size: 200%;
+  });
+
+  .breakpoint-large({
+    font-size: 250%;
+  });
+
+  span {
+    display: block;
+  }
+}
+  
+//font size styling
 
 #landing-page {
   background-image: url("../images/photographs/landing.jpg");
-  background-size: 125%;
-  background-position: 50% 0px;
-  font-size: 54px;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 36px;
   background-repeat: no-repeat;
 
-  .company-name-header {
-    font-family: 'Parisish';
-    font-size: 100%;
-    color: @white;
-
-    .breakpoint-medium({
-      font-size: 150%;
-    });
-    span {
-      display: block;
-    }
-  }
+  .breakpoint-small({
+    background-position: 50% 0px;
+    background-size: 125%;
+  });
 
 }
 
 #about-summary {
   color: @black;
-
+  font-size: 16px;
   img {
     height: 100px;
   }
-  h2 {
-    font-family: 'Parisish';
-    font-size: 20px;
 
-    .breakpoint-medium({
-      font-size: 150%;
-    });
-
-    span {
-      display: block;
-    }
-  }
-
-
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+  .company-name-header {
+    color: @black !important;
   }
 }
 
 #transition-one {
   background-image: url("../images/photographs/quote.jpg");
   background-size: 100% auto;
-  background-position: 50% 30%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+  
 
   h5 {
     font-family: 'Open Sans', sans-serif;
@@ -119,19 +184,23 @@
 #about-jane {
   color: @black;
 
+  .jane-photo-container {
+    text-align: center;
+    .breakpoint-small({
+      text-align: right;
+    });
+  }
+
+  .jane-biography-container {
+    text-align: center;
+    .breakpoint-small({
+      text-align: left;
+    });
+  }
+
   img {
     height: 200px;
     margin-top: 25px;
-  }
-
-  h3 {
-    font-family: 'Parisish';
-    font-size: 30px;
-  }
-
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
   }
 }
 
@@ -141,53 +210,74 @@
   background-size: cover;
   background-position: center;
 
-
+  .selected-offering-text {
+    height: 230px;
+  }
 
   .offering-section {
-    h4 {
+
+    .offering-button {
       font-family: 'Axis';
-      font-size: 16px;
+      font-size: 100%;
+      border: 2px solid @icon_pink_hover;
+      border-radius: 4px;
+      color: @icon_pink_hover;
+      padding: 10px;
+      line-height: 1;
+      margin: 0;
+      background-color: transparent;
+      cursor: pointer;
+      margin-bottom: 2%;
+      .breakpoint-small({
+        margin-bottom: 0;
+      });
     }
 
-    p {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
+    .offering-button:hover, .offering-button.selected-offering {
+      background-color: @icon_pink_hover;
+      color: @white;
+      transition: background-color 1s;
+      transition: color 1s;
     }
   }
 }
 
 
 #philosophy-page {
-
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  .circle-logo {
+    height: 100px;
+    margin-bottom: 2%;
   }
+      
 
 }
 
 
 #gallery-page {
-  h6 {
-    font-family: 'Parisish';
-    font-size: 30px;
-  }
+
 }
 
 
 #contact-page {
   .contact-method {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    .breakpoint-small({
+      margin-bottom: 20px;  
+    });
+    
 
     p {
-      font-family: 'Axis';
-      font-size: 18px;
       display: inline;
       vertical-align: middle;
     }
 
     a {
       color: @pink;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: @hover_pink;
     }
 
     .black-paw {
@@ -196,20 +286,116 @@
       height: 25px;
     }
   }
+
+  .contact-form {
+    background-color: @white;
+    color: @grey;
+    text-align: right;  
+
+    .form-group .help-block {
+      display: none;
+    }
+     
+    .form-group.has-error .help-block {
+      display: block;
+      margin: .75%;
+      font-weight: 600;
+      font-size: 60%;
+    }
+
+    .form-group.has-error .input-container {
+      margin: 0% .75%;
+    }
+
+    .form-control {
+      font-size: 90%;
+      border-radius: 0px;
+      border: 2px solid @white;
+    }
+
+    input.form-control {
+      padding: 5px;
+      min-height: 25px;
+      font-family: 'Axis';
+      -moz-box-sizing: border-box;
+      border-color: @grey;
+      border-width: 2px;
+
+      .breakpoint-small ({
+        padding: 10px;
+        min-height: 50px;
+      });
+    }
+
+
+    textarea.form-control {
+      min-height: 100px;
+      padding: 5px;
+      font-family: 'Axis';
+      -moz-box-sizing: border-box;
+      border-color: @grey;
+      border-width: 2px;
+
+      .breakpoint-small ({
+        min-height: 150px;
+        padding: 10px;
+      });
+    }
+
+
+    .contact-button {
+      background-color: @icon_pink_hover;
+      border-radius: 4px;
+      border-color: @icon_pink_hover;
+      color: @white;
+      font-size: 125%;
+      font-family: 'Axis';
+      margin-top: 2.5%;
+    }
+
+    .contact-button:hover {
+      -webkit-box-shadow: 0px 0px 20px @icon_pink_hover; 
+      -moz-box-shadow: 0px 0px 20px @icon_pink_hover; 
+      box-shadow: 0px 0px 20px @icon_pink_hover; 
+      color: @white;
+      transition: box-shadow .25s ease;
+    }
+
+    .contact-message {
+      display: none;
+      font-size: 90%;
+      font-family: 'Axis';
+      margin: 0;
+    }
+
+    .successMessage {
+      display: block;
+      color: rgba(71, 189, 129, 1.0);
+    }
+
+    .failureMessage {
+      display: block;
+      color: red;
+    }
+
+    .hideButton {
+      display: none;
+    }
+  }
   
 }
 
 
 #map-section {
-  h6 {
-    font-family: 'Parisish';
-    font-size: 30px;
-  }
 
   #map {
-    background-position: center;
-    background-size: cover;
+    background-position: 10% 50%;
+    background-size: 150%;
     background-image: url('http://api.tiles.mapbox.com/v4/mapbox.streets-basic/pin-l-dog-park+c091e6(-71.212660074234,42.31913734412221,17)/-71.212660074234,42.31913734412221,17/1280x1280.png?access_token=pk.eyJ1IjoiaGVucnlraWVseSIsImEiOiJ1czZCVkFVIn0.5CwMFCLWHzwFhxpt5XtCDg');
+    .breakpoint-small({
+      background-position: center;
+      background-size: cover;
+    });
   }
 
   #map-text {
@@ -217,17 +403,22 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
+    height: 350px;
+    .breakpoint-small ({
+      height: 430px;
+    });
   }
 }
 
 
 #bottom-bar {
   padding-top: 2%;
-  h6 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  .bottom-bar-text {
     display: inline;
     padding: 5px 20px;
+  }
+  .bottom-row {
+    padding-bottom: 2%;
   }
 
   .contact-icon {

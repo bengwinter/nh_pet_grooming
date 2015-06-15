@@ -1,22 +1,20 @@
-<div class="row section" id="landing-page" ng-style="setHeightWidthAndPadding(1.0, .35, 0, 0)" resize>
-  
+<div class="row section" id="landing-page" ng-style="setHeightWidthAndPadding(1.0, .35, 0, 1)" resize>
   <div class="col-xs-12 text-center" perfect-parallax parallax-ratio="-.3" parallax-css="margin-top">
     <h1 class="company-name-header">Newton Highlands<span>GROOMING & PET BOUTIQUE</span></h1>
   </div>
-
 </div>
 <div class="row section short-section" id="about-summary" perfect-parallax parallax-ratio="-.9" parallax-css="margin-top">
   <centered>
-    <div class="col-xs-6 col-xs-offset-3 text-center">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 text-center">
       <img ng-src="../images/illustrations/dog.svg"/>
-      <h2  class="company-name-header">Newton Highlands<span>GROOMING</span></h2>
-      <p > offers gentle grooming for dogs and cats in an intimate environment. Two-time winner of Best of Boston, we have chosen to remain a small shop. This has allowed us to continue to give your pet the personal attention that we have come to be known for.</p>
+      <h2 class="company-name-header">Newton Highlands<span>GROOMING</span></h2>
+      <p class="regular-text"> offers gentle grooming for dogs and cats in an intimate environment. Two-time winner of Best of Boston, we have chosen to remain a small shop. This has allowed us to continue to give your pet the personal attention that we have come to be known for.</p>
     </div>
   </centered>
 </div>
-<div class="row section short-section" id="transition-one" perfect-parallax parallax-ratio="-.9" parallax-css="background-position-y" parallax-init-val="-20">
+<div class="row section short-section" id="transition-one" perfect-parallax parallax-ratio="-.9" parallax-css="background-position-y" parallax-init-val="-10">
   <centered>
-    <div class="col-xs-10 col-xs-offset-1 text-center">
+    <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
       <h5 class="quote">"Our perfect companions never have fewer than four feet."</h5>
       <h5 class="quote-author">-Sidonie-Gabrielle Colette</h5>
     </div>
@@ -24,12 +22,12 @@
 </div>
 <div class="row section medium-section" id="about-jane">
   <centered>
-    <div class="col-xs-5 text-right vertical-align-container" >
+    <div class="col-sm-5 col-xs-12 jane-photo-container" >
       <img ng-src="../images/photographs/jane.png"/>
     </div>
-    <div class="col-xs-6 vertical-align-container text-left">
-      <h3>JANE BRUCE</h3>
-      <p>Jane Bruce has been an animal lover her entire life, and has been fortunate enough to have found her true calling more than 20 years ago. In 1998, she had the great opportunity to purchase an existing pet grooming shop and make it her own. This has enabled her to combine her artistic side with her love of all things furry.</p>
+    <div class="col-sm-5 col-xs-12 jane-biography-container">
+      <h3 class="section-header no-bottom-margin">JANE BRUCE</h3>
+      <p class="regular-text">Jane Bruce has been an animal lover her entire life, and has been fortunate enough to have found her true calling more than 20 years ago. In 1998, she had the great opportunity to purchase an existing pet grooming shop and make it her own. This has enabled her to combine her artistic side with her love of all things furry.</p>
     </div>
   </centered>
 </div>
@@ -38,17 +36,14 @@
     <div class="col-xs-12 text-center">
       <h3 class="section-header">OUR OFFERINGS</h3>
     </div>
-    <div class="col-xs-10 col-xs-offset-1 text-center">
-      <p>{{offeringSelected}}</p>
+    <div class="col-xs-10 col-xs-offset-1 text-center selected-offering-text">
+      <centered>
+        <p class="regular-text axis-font">{{offeringSelected}}</p>
+      </centered>
     </div>
-    <div class="col-xs-2 col-xs-offset-3 offering-section">
-      <h4 class="offering-button">FOR DOGS</h4>
-    </div>
-    <div class="col-xs-2 offering-section">
-      <h4 class="offering-button">FOR CATS</h4>
-    </div>
-    <div class="col-xs-2 offering-section">
-      <h4 class="offering-button">FOR EVERYONE</h4>
+    <div class="col-sm-3 hidden-xs"></div>
+    <div class="col-sm-2 col-xs-12 offering-section" ng-repeat="offering in offerings">
+      <h4 class="offering-button" ng-class="{'selected-offering': offering.selected}" ng-click="changeOfferingText(offering.position)">{{offering.title}}</h4>
     </div>
   </centered>
 </div>
@@ -57,17 +52,20 @@
     <div class="col-xs-12 text-center">
       <h3 class="section-header">OUR PHILOSOPHY</h3>
     </div>
-    <div class="col-xs-7 col-xs-offset-1 vertical-align-container">
-      <p>With over 20 years of grooming experience our goal is to help educate our clients on the proper care of their cherished pets. This enables them to spot problems and potential health issues.</br></br>We strive to get to know you and your pet so that we can accommodate any special needs and provide that level of unique attention that both you and your pet deserve.</br></br>All animals are treated with kindness and respect. Our policy puts all dogs’ health and comfort above cosmetics and aesthetics.  If we deem the coat is too matted, the only humane thing to do is a short clip. We will NEVER hurt an animal to save the coat.</p>
+    <div class="col-xs-12 visible-xs">
+      <img class="circle-logo" ng-src="../images/logo/logo_circle.svg"/>
     </div>
-    <div class="col-xs-3 vertical-align-container">
+    <div class="col-sm-7 col-sm-offset-1 col-xs-12 text-left">
+      <p class="regular-text">With over 20 years of grooming experience our goal is to help educate our clients on the proper care of their cherished pets. This enables them to spot problems and potential health issues.</br></br>We strive to get to know you and your pet so that we can accommodate any special needs and provide that level of unique attention that both you and your pet deserve.</br></br>All animals are treated with kindness and respect. Our policy puts all dogs’ health and comfort above cosmetics and aesthetics.  If we deem the coat is too matted, the only humane thing to do is a short clip. We will NEVER hurt an animal to save the coat.</p>
+    </div>
+    <div class="col-sm-3 hidden-xs">
       <img ng-src="../images/logo/logo_circle.svg"/>
     </div>
   </centered>
 </div>
 <div class="row section" id="gallery-page">
-  <div class="col-xs-12 text-center subsection-header">
-    <h6>Click on a picture below to see more of our store and work</h6>
+  <div class="col-xs-12 text-center">
+    <h6 class="subsection-header">Click on a picture below to see more of our store and work</h6>
   </div>
   <div class="col-xs-12">
     <h6>Gallery</h6>
@@ -75,55 +73,87 @@
 </div>
 <div class="row section short-section" id="contact-page">
   <centered>
-  <div class="col-xs-5 col-xs-offset-2 text-left">
+  <div class="col-sm-5 col-sm-offset-1 text-left col-xs-12">
     <div class="contact-method">
       <img class="black-paw" ng-src="../images/icons/paw_faceup_black.svg"/>
-      <p>follow Jane at her <a ng-href="https://www.google.com" target="_blank">blog</a></p>
+      <p class="regular-text axis-font">follow Jane at her <a ng-href="https://www.google.com" target="_blank">blog</a></p>
     </div>
     <div class="contact-method">
       <img class="black-paw" ng-src="../images/icons/paw_faceup_black.svg"/>
-      <p>write us a message</p>
+      <p class="regular-text axis-font">write us a message</p>
     </div>
     <div class="contact-method">
       <img class="black-paw" ng-src="../images/icons/paw_faceup_black.svg"/>
-      <p>check us out on <a ng-href="https://www.google.com" target="_blank">facebook</a> or <a ng-href="https://www.google.com" target="_blank">tumblr</a></p>
+      <p class="regular-text axis-font">check us out on <a ng-href="https://www.google.com" target="_blank">facebook</a> or <a ng-href="https://www.google.com" target="_blank">tumblr</a></p>
     </div>
     <div class="contact-method">
       <img class="black-paw" ng-src="../images/icons/paw_faceup_black.svg"/>
-      <p>leave us on a review on <a ng-href="https://www.google.com" target="_blank">yelp</a></p>
+      <p class="regular-text axis-font">leave us on a review on <a ng-href="https://www.google.com" target="_blank">yelp</a></p>
     </div>
   </div>
-  <div class="col-xs-5">
-    <h6>Contact Form</h6>
+  <div class="col-sm-5 col-xs-12 contact-form">
+    <form name="form.contact" novalidate>
+      <div class="row">
+        <div class="col-sm-5 col-xs-12 input-container">
+          <div class="form-group" show-errors>
+            <input type="text" class="form-control" placeholder="NAME" name="name" ng-model="contact.name" required></input>
+            <p class="help-block" ng-if="form.contact.name.$error.required">Please provide your name</p>
+          </div>
+        </div>
+        <div class="col-sm-7 col-xs-12 input-container">
+          <div class="form-group" show-errors>
+            <input type="email" class="form-control" name="email" ng-model="contact.email"  placeholder="EMAIL ADDRESS" required></input>
+            <p class="help-block" ng-if="form.contact.email.$error.required">An email address is required</p>
+            <p class="help-block" ng-if="form.contact.email.$error.email">Please enter a valid email address</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group" show-errors>
+          <div class="col-xs-12 input-container">
+            <textarea class="form-control" name="message" ng-model="contact.message" placeholder="MESSAGE" required></textarea>
+          </div>
+          <div class="col-xs-12">
+            <p class="help-block" ng-if="form.contact.message.$error.required">Please provide a message</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <button class="btn btn-success btn-lg contact-button" ng-class="{'hideButton': submitMessageSuccess}" ng-click="sendContactForm()" ng-disabled="form.contact.$invalid">SUBMIT</button>
+          <p class="contact-message" ng-class="{'successMessage': submitMessageSuccess, 'failureMessage': !submitMessageSuccess}">{{submitMessage}}</p>
+        </div>
+      </div>
+    </form>
   </div>
   </centered>
 </div>
 <div class="row section" id="map-section">
-  <div class="col-xs-12 text-center subsection-header">
-    <h6>Or stop in and say hello!</h6>
+  <div class="col-xs-12 text-center">
+    <h6 class="subsection-header">Or stop in and say hello!</h6>
   </div>
     <div class="col-xs-12" id="map">
       <div class="row">
-        <div class="col-xs-5 short-section" id="map-text">
+        <div class="col-xs-7 col-sm-5 short-section" id="map-text">
           <centered>
-            <p class="text-left">We are located on the corner of Route 9 Westbound and Woodward Street. There is a small parking lot located behind my shop. It is accessible from Rt. 9 Westbound, or from Woodward. The Woodward Street entrance has an arrow marking it as an exit but it has always been used as an entrance as well.</p>
+            <p class="text-left regular-text bold-font">We are located on the corner of Route 9 Westbound and Woodward Street. There is a small parking lot located behind my shop. It is accessible from Rt. 9 Westbound, or from Woodward. The Woodward Street entrance has an arrow marking it as an exit but it has always been used as an entrance as well.</p>
           </centered>
         </div>
       </div>
     </div>
 </div>
 <div class="row section" id="bottom-bar">
-  <div class="col-xs-12 text-center">
-    <h6>9 WOODLAND STREET, NEWTON HIGHLANDS, MA</h6>
-    <h6>(617) 630-8449</h6>
-    <h6>JANE@NEWTONHIGHLANDSGROOMING.COM</h6>
+  <div class="col-xs-12 text-center bottom-row">
+    <p class="regular-text bottom-bar-text">9 WOODLAND STREET, NEWTON HIGHLANDS, MA</p>
+    <p class="regular-text bottom-bar-text">(617) 630-8449</p>
+    <p class="regular-text bottom-bar-text">JANE@NEWTONHIGHLANDSGROOMING.COM</p>
   </div>
-  <div class="col-xs-12 text-center">
+  <div class="col-xs-12 text-center bottom-row">
     <div class="contact-icon" ng-repeat="method in contactIcons">
       <a ng-href="{{method.href}}" target="_blank"><i class="fa {{method.icon}}"></i></a>
     </div>
   </div>
-  <div class="col-xs-12 text-center">
+  <div class="col-xs-12 text-center bottom-row">
     <h6 class="powered-by">powered by <a ng-href="https://www.julycampdesign.com" target="_blank">July Camp</h6>
   </div>
 </div>

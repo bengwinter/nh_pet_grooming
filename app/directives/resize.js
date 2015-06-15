@@ -4,15 +4,8 @@ angular
       return function (scope, element) {
         var w = angular.element($window);
 
-        scope.getWindowDimensions = function () {
-
-          if(w.height() < 650) {
-            var windowHeight = 650;
-          } else {
-            var windowHeight = w.height();
-          }     
-
-          return { 'h': windowHeight, 'w': w.width(), 's': w.scrollTop()};
+        scope.getWindowDimensions = function () {  
+          return { 'h': w.height(), 'w': w.width(), 's': w.scrollTop()};
         };
 
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
