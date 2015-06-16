@@ -148,6 +148,27 @@
 
 #about-summary {
   color: @black;
+
+  h2 {
+    font-size: 100%;
+    font-family: 'Parisish';
+    .breakpoint-small({
+      font-size: 133%;
+    });
+
+    .breakpoint-medium({
+      font-size: 167%;
+    });
+
+    .breakpoint-large({
+      font-size: 200%;
+    });
+
+    span {
+      display: block;
+    }
+  }
+
   img {
     height: 100px;
   }
