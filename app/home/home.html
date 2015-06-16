@@ -71,7 +71,7 @@
     <h6 class="subsection-header">Click on a picture below to see more of our store and work</h6>
   </div>
   <div class="col-xs-12">
-    <slidebox contentWidth="5000px" class="my-slidebox" content-class="my-slidebox-content"><img class="gallery-image" ng-repeat="slide in gallerImages" ng-src="slide" /></slidebox>
+    <slidebox class="my-slidebox" content-class="my-slidebox-content"><img class="gallery-image" ng-repeat="slide in galleryImages" ng-src="{{slide}}" /></slidebox>
   </div>
 </div>
 <div class="row section short-section" id="contact-page">
@@ -153,7 +153,7 @@
   </div>
   <div class="col-xs-12 text-center bottom-row">
     <div class="contact-icon" ng-repeat="method in contactIcons">
-      <a ng-href="{{method.href}}" target="_blank"><i class="fa {{method.icon}}"></i></a>
+      <a ng-href="{{method.href}}" target="{{method.target}}"><i class="fa {{method.icon}}"></i></a>
     </div>
   </div>
   <div class="col-xs-12 text-center bottom-row">

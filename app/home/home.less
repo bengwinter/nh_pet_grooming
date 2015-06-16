@@ -275,6 +275,58 @@
 
 #gallery-page {
 
+  .gallery-image {
+    height: 400px;
+    width: auto;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px
+  }
+
+  .slidebox-container {
+    position: relative;
+  }
+
+  .slidebox {
+      height: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  .slidebox-content {
+    width: 15000px;
+    height: 400px;
+  }
+
+  .slidebox-controls {
+      background-size: 50% !important;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      height: 400px;
+      bottom: 0; /* don't cover scrollbar */
+      width: 10%;
+  }
+
+  .slidebox-left {
+      background: transparent url('../images/left-arrow.png') center center no-repeat;
+      left: 0;
+      cursor: w-resize;
+  }
+
+  .slidebox-right {
+      background: transparent url('../images/right-arrow.png') center center no-repeat;
+      right: 0;
+      cursor: e-resize;
+  }
+
+  .box {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #eef;
+  }
 }
 
 
@@ -476,67 +528,4 @@
       color: @black;
     }
   }
-}
-
-
-/**
- * Slidebox default styles
- * 
- * http://github.com/keithjgrant/slidebox
- * Version 0.9
- */
-
-.slidebox-container {
-    position: relative;
-}
-
-.slidebox {
-    height: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px;
-}
-
-.slidebox-content {
-}
-
-.slidebox-controls {
-    border: #fff 1px solid;
-    border-radius: 3px;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    bottom: 15px; /* don't cover scrollbar */
-    width: 10%;
-}
-
-.slidebox-left {
-    background: rgba(128, 128, 128, 0.5) url(https://raw.github.com/keithjgrant/slidebox/master/images/left-arrow.png) center center no-repeat;
-    left: 0;
-    cursor: w-resize;
-}
-
-.slidebox-right {
-    background: rgba(128, 128, 128, 0.5) url(https://raw.github.com/keithjgrant/slidebox/master/images/right-arrow.png) center center no-repeat;
-    right: 0;
-    cursor: e-resize;
-}
-
-.box {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: #eef;
-}
-
-/* page styles */
-
-.my-slidebox-content {
-  -webkit-column-count: 5;
-  -webkit-column-gap: 15px;
-  -moz-column-count: 5;
-  -moz-column-gap: 15px;
-  column-count: 5;
-  column-gap: 15px;
 }
