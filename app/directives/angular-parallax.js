@@ -40,7 +40,6 @@ angular.module('perfectParallax', []).directive('perfectParallax', [
               resultVal = calcVal + 'px';
             }
             if($window.innerWidth > 768) {
-              console.log($window.innerWidth);
               iElem.css(cssKey, resultVal);
             }
             

@@ -9,7 +9,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'perfectParallax'
+    'perfectParallax',
+    'Slidebox'
   ])
   .config(function ($routeProvider, $httpProvider) {
 
