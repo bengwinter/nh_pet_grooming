@@ -17,24 +17,29 @@ angular
         
         $scope.galleryImages = ["https://s3.amazonaws.com/nhpet/nh_pet_gallery_01.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_02.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_03.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_04.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_05.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_06.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_07.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_08.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_09.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_10.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_11.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_12.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_13.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_14.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_15.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_16.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_17.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_18.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_19.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_20.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_21.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_22.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_23.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_24.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_25.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_26.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_27.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_28.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_29.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_30.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_31.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_32.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_33.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_34.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_35.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_36.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_37.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_38.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_39.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_40.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_41.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_42.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_43.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_44.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_45.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_46.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_47.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_48.jpg", "https://s3.amazonaws.com/nhpet/nh_pet_gallery_49.jpg"];
 
-        $scope.galleryImageWidth = 500;
+        //total width of images below plus the 5px margin on each side which is 490
+        // $scope.originalGalleryImageWidth = 32597 + 490;
         
-        if (angular.element(window).width() < 768) {
-          var imageMultiplier = (1/3);
-        } else if (angular.element(window).width() <= 992) {
-          var imageMultiplier = (1/2);
-        } else {
-          var imageMultiplier = (2/3);
-        }
+        // if (angular.element(window).width() <= 992) {
+        //   $scope.galleryImageWidth = $scope.originalGalleryImageWidth * (1/2);
+        // } else {
+        //   $scope.galleryImageWidth = $scope.originalGalleryImageWidth * (2/3);
+        // }
 
-        for (j = 0; j < $scope.galleryImages.length; j++) { 
-          var targetImage = new Image();
-          targetImage.src = $scope.galleryImages[j];
-          $scope.galleryImageWidth += (targetImage.width * imageMultiplier);
-          console.log($scope.galleryImageWidth);
-          console.log(j);
-        };
-        angular.element('.slidebox-content').width($scope.galleryImageWidth);
+        // $scope.galleryImageWidth += 250;
+
+        // 16789.5px
+
+
+        //used to figure out full width of the images...only needs to be run if the images change and need to update value above
+        // $scope.galleryImageWidthTrue = 0;
+        // for (j = 0; j < $scope.galleryImages.length; j++) { 
+        //   var targetImage = new Image();
+        //   targetImage.src = $scope.galleryImages[j];
+        //   $scope.galleryImageWidthTrue += (targetImage.width);
+        // };
+
+        // angular.element('.slidebox-content').width($scope.galleryImageWidth);
 
         $scope.contactIcons = [
           {
@@ -61,9 +66,6 @@ angular
 
       };
       
-      initializePage();
-
-
       $scope.changeOfferingText = function(position) {
         //reset selected button
         for (i = 0; i < $scope.offerings.length; i++) { 
@@ -112,6 +114,8 @@ angular
       
         }
       };
+
+      initializePage();
 
       
     });

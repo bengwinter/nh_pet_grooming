@@ -285,11 +285,15 @@
 #gallery-page {
 
   .gallery-image {
-    height: 400px;
+    height: 300px;
     width: auto;
     cursor: pointer;
     margin-left: 5px;
-    margin-right: 5px
+    margin-right: 5px;
+
+    .breakpoint-medium({
+      height: 400px;
+    });
   }
 
   .slidebox-container {
@@ -304,7 +308,12 @@
   }
 
   .slidebox-content {
-    height: 400px;
+    height: 300px;
+    width: 16793.5px;
+    .breakpoint-medium({
+      height: 400px;
+      width: 22223px;
+      });
   }
 
   .slidebox-controls {
@@ -312,9 +321,13 @@
       opacity: 0.5;
       position: absolute;
       top: 0;
-      height: 400px;
+      height: 300px;
       bottom: 0; /* don't cover scrollbar */
       width: 10%;
+
+      .breakpoint-medium({
+        height: 400px;
+      });
   }
 
   .slidebox-left {
