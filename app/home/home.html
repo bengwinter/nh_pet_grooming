@@ -71,7 +71,7 @@
     <h6 class="subsection-header">Click on a picture below to enlarge</h6>
   </div>
   <div class="col-xs-12">
-    <slidebox class="my-slidebox" content-class="my-slidebox-content"><img class="gallery-image" ng-repeat="slide in galleryImages" ng-src="{{slide}}" /></slidebox>
+    <slidebox class="my-slidebox" content-class="my-slidebox-content"><img class="gallery-image" ng-repeat="slide in galleryImages" ng-click="openGalleryModal(slide)" ng-src="{{slide['src']}}" /></slidebox>
   </div>
 </div>
 <div class="row section short-section" id="contact-page">
@@ -157,6 +157,10 @@
     </div>
   </div>
   <div class="col-xs-12 text-center bottom-row">
-    <h6 class="powered-by">powered by <a ng-href="https://www.julycampdesign.com" target="_blank">July Camp</h6>
+    <p class="legal-modal" ng-click="openLegalModal('lg', 'privacy-policy')">Privacy Policy</p>
+    <p>|</p>
+    <p class="legal-modal" ng-click="openLegalModal('lg', 'terms-conditions')">Terms of Use</p>
+    <p>|</p>
+    <h6 class="powered-by">powered by <a ng-href="http://www.julycampdesign.com" target="_blank">July Camp</h6>
   </div>
 </div>
