@@ -4,10 +4,12 @@
     <button type="button" class="close" ng-click="closeModal()"><span aria-hidden="true">&times;</span></button>
   </div>
   <div class='modal-body'>
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <img class="modal-gallery-photo" ng-src="{{selectedPhoto}}" style="max-height:{{photoMaxHeight}}"/>
+    <div class="row" style="height:{{photoMaxHeight}};">
+      <div class="col-xs-2 gallery-arrow gallery-left-arrow" ng-click="togglePhoto(-1)"></div>
+      <div class="col-xs-8 text-center modal-photo-container" style="padding:{{photoPadding}} 0;">
+        <img class="modal-gallery-photo" ng-src="{{selectedPhotoSrc}}"/>
       </div>
+      <div class="col-xs-2 gallery-arrow gallery-right-arrow" ng-click="togglePhoto(1)"></div>
     </div>
   </div>
   <div class='modal-footer'>

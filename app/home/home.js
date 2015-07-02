@@ -20,7 +20,6 @@ angular
           $scope.legal = data["legal"];
         });
         
-        
 
         //total width of images below plus the 5px margin on each side which is 490
         // $scope.originalGalleryImageWidth = 32597 + 490;
@@ -92,11 +91,14 @@ angular
             modalText: function () {
               return "";
             },
+            modalPhotoGallery: function(){
+              return $scope.galleryImages;
+            },
             modalImage: function() {
-              return selectedPhoto["src"];
+              return selectedPhoto;
             },
             modalTitle: function () {
-              return selectedPhoto["title"];
+              return "";
             }
           }
         });
@@ -110,6 +112,9 @@ angular
           resolve: {
             modalText: function () {
               return $scope.legal[modalType]["bodyText"];
+            },            
+            modalPhotoGallery: function(){
+              return "";
             },
             modalImage: function() {
               return "";
