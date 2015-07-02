@@ -22,6 +22,15 @@ angular
               'padding-bottom': (newValue.h * percentage * paddingBottomPercentage * mobilePaddingPercentage) + 'px'
             };
           };
+
+          scope.setHeightPercentage = function (percentage) {
+
+            return {
+              'height': (newValue.h * percentage) + 'px'
+            };
+          };
+
+
                 
         }, true);
       

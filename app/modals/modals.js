@@ -13,9 +13,6 @@ angular
         $scope.title = modalTitle;  
         $scope.text = modalText;  
       }
-      
-      $scope.photoMaxHeight = (angular.element($window).height() * .7) + 'px';
-      $scope.photoPadding = ((angular.element($window).height() * .7) * .1) + 'px'; 
 
       $scope.closeModal = function () {
         $modalInstance.dismiss('cancel');
