@@ -154,9 +154,11 @@
     <p class="regular-text bottom-bar-text">JANE@NEWTONHIGHLANDSGROOMING.COM</p>
   </div>
   <div class="col-xs-12 text-center bottom-row">
-    <div class="contact-icon" ng-repeat="method in contactIcons">
-      <a ng-href="{{method.href}}" target="{{method.target}}"><i class="fa {{method.icon}}"></i></a>
-    </div>
+    <a ng-href="{{method.href}}" target="{{method.target}}" ng-repeat="method in contactIcons">
+      <div class="contact-icon">
+        <i class="fa {{method.icon}}"></i>
+      </div>
+    </a>
   </div>
   <div class="col-xs-12 text-center bottom-row legal-text">
     <p class="regular-text bold-text legal-modal" ng-click="openLegalModal('lg', 'privacy-policy')">Privacy Policy</p>
