@@ -2,10 +2,11 @@
 
 angular
   .module('nhPet')
-    .controller('ModalsCtrl', function ($scope, $modal, $modalInstance, modalText, modalImage, modalTitle) {
+    .controller('ModalsCtrl', function ($scope, $modal, $modalInstance, modalText, modalImage, $window, modalTitle) {
       $scope.title = modalTitle;
       $scope.text = modalText;  
       $scope.selectedPhoto = modalImage;
+      $scope.photoMaxHeight = angular.element($window).height() * 2/3 + 'px';
 
       debugger;
 
