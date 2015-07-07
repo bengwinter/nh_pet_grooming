@@ -40,6 +40,23 @@ angular.module('perfectParallax', []).directive('perfectParallax', [
               resultVal = calcVal + 'px';
             }
 
+            console.log(iElem);
+            console.log(cssKey);
+            console.log(resultVal);
+
+            if ((iElem[0].id === "about-summary") && (cssKey === "margin-top")) {
+              if (calcVal < ($window.innerHeight * -1.5)) {
+                calcVal = ($window.innerHeight * -1.5);
+              }
+              resultVal = calcVal + 'px';
+            } else if ((iElem[0].id === "company-name-header-container") && (cssKey === "margin-top")) {
+              if (calcVal < ($window.innerHeight * -1)) {
+                calcVal = ($window.innerHeight * -1);
+              }
+              resultVal = calcVal + 'px';  
+            }
+
+
             if($window.innerWidth > 768) {
               iElem.css(cssKey, resultVal);
             }
