@@ -242,10 +242,12 @@
   }
 
   .offering-section {
+    margin-top: 10px;
 
     .offering-button {
       font-family: 'Axis';
-      font-size: 100%;
+      font-size: 80%;  
+      width: 100%;
       border: 2px solid @icon_pink_hover;
       border-radius: 4px;
       color: @icon_pink_hover;
@@ -257,6 +259,8 @@
       margin-bottom: 2%;
       .breakpoint-small({
         margin-bottom: 0;
+        width: auto;
+        font-size: 100%;
       });
     }
 
@@ -507,6 +511,13 @@
     padding: 0 5%;
     .breakpoint-small ({
       height: 430px;
+    });
+  }
+
+  #map-text p {
+    font-size: 75%;
+    .breakpoint-small({
+      font-size: 80%;
     });
   }
 }
