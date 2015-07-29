@@ -81,7 +81,11 @@
 
 .regular-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 80%;
+  .breakpoint-small({
+    font-size: 80%;
+  });
+
+  
 }
 
 .section-header {
@@ -527,10 +531,16 @@
   padding-top: 2%;
   .bottom-bar-text {
     display: inline;
-    padding: 5px 20px;
+    .breakpoint-small({
+      padding: 5px 20px;  
+      });
+    
   }
   .bottom-row {
-    padding-bottom: 2%;
+    .breakpoint-small({
+      padding-bottom: 2%;
+    });
+    
   }
 
   a {
