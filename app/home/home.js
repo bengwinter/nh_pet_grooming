@@ -154,7 +154,7 @@ angular
            };
 
 
-         $.post('http://thebigflamingo.com/contact/send', message, function(res) { 
+         $.post('/contact/send', message, function(res) { 
           $scope.$broadcast('show-errors-reset');
           $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
           $scope.submitMessageSuccess = true;
