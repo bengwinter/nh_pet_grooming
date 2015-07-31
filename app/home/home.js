@@ -6,6 +6,7 @@ angular
 
       var initializePage = function() {
         $scope.gallery = {};
+        $scope.form = {};
 
         $scope.offeringSelected = "All dog grooming includes a pedicure, ear plucking and cleaning, and a soothing bath using the “Hydrosurge” bathing system. Our shampoos are all natural and we offer several options at no extra charge- Hair is cut and styled in accordance with the owner’s vision, giving consideration to the dog’s lifestyle, temperament, and the frequency of grooming. A severely matted dog will most often be cut short. We will NEVER hurt an animal to save the coat."; 
 
@@ -67,6 +68,10 @@ angular
             "href": "https://www.tumblr.com",
             "target": "_blank"
         }];  
+
+        // debugger;
+        // $window.setTimeout
+        // $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
 
       };
       
@@ -131,7 +136,6 @@ angular
 
         if ($scope.form.contact.$valid) {
           // debugger;
-          //contact form code here SAM GRONDAHL
           var contactEmail = $scope.form.contact.email.$viewValue;
           var contactName = $scope.form.contact.name.$viewValue;
           var contactMessage = $scope.form.contact.message.$viewValue;
@@ -156,7 +160,7 @@ angular
            });
 
           $scope.$broadcast('show-errors-reset');
-          $scope.contact = { name: '', email: '', message: '', telephone: '', reason: '' };
+          $scope.contact = { name: '', email: '', message: ''};
           $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
           $scope.submitMessageSuccess = true;
 
