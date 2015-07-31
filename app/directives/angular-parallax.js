@@ -40,10 +40,6 @@ angular.module('perfectParallax', []).directive('perfectParallax', [
               resultVal = calcVal + 'px';
             }
 
-            console.log(iElem);
-            console.log(cssKey);
-            console.log(resultVal);
-
             if ((iElem[0].id === "about-summary") && (cssKey === "margin-top")) {
               if (calcVal < ($window.innerHeight * -1.5)) {
                 calcVal = ($window.innerHeight * -1.5);
