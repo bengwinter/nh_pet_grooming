@@ -154,11 +154,11 @@ angular
            };
 
 
-         $.post('/contact/send', message, function(res) { 
+         $.post('http://thebigflamingo.com/contact/send', message, function(res) { 
           $scope.$broadcast('show-errors-reset');
           $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
           $scope.submitMessageSuccess = true;
-          $scope.contact = { name: '', email: '', message: '', telephone: '' };
+          $scope.contact = { name: '', email: '', message: ''};
          }).error(function(xhr) { 
           $scope.submitMessage = "There was an error sending your message. Please try again."
           $scope.submitMessageFailure = true;
