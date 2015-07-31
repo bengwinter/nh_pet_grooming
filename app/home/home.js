@@ -153,16 +153,18 @@ angular
             data : data
            };
 
-         $.post('/contact/send', message, function(res) { })
-           .error(function(xhr) { 
-            $scope.submitMessage = "There was an error sending your message. Please try again."
-            $scope.submitMessageFailure = true;
-           });
 
+         $.post('/contact/send', message, function(res) { 
           $scope.$broadcast('show-errors-reset');
-          $scope.contact = { name: '', email: '', message: ''};
           $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
           $scope.submitMessageSuccess = true;
+          $scope.contact = { name: '', email: '', message: '', telephone: '' };
+         }).error(function(xhr) { 
+          $scope.submitMessage = "There was an error sending your message. Please try again."
+          $scope.submitMessageFailure = true;
+         });
+
+          
 
       
         }
