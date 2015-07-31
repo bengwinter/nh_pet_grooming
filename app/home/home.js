@@ -153,7 +153,6 @@ angular
             data : data
            };
 
-           debugger;
          $.post('/contact/send', message, function(res) { 
             $scope.$broadcast('show-errors-reset');
             $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
@@ -169,6 +168,13 @@ angular
       };
 
       initializePage();
-
+      $(function(){
+        setTimeout(function(){
+          $('html, body')
+          .css({
+            'overflow': 'auto'
+          });
+        }, 5000);
+      });
       
     });
