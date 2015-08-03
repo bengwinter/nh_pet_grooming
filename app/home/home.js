@@ -69,10 +69,6 @@ angular
             "target": "_blank"
         }];  
 
-        // debugger;
-        // $window.setTimeout
-        // $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
-
       };
       
       $scope.changeOfferingText = function(position) {
@@ -174,7 +170,7 @@ angular
           .css({
             'overflow': 'auto'
           });
-        }, 3000);
+        }, 3860);
       });
       
     });
