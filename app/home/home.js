@@ -162,6 +162,11 @@ angular
           $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
           $scope.submitMessageSuccess = true;
 
+          setTimeout(function(){ 
+            $scope.submitMessage = '';
+            $scope.submitMessageSuccess = false;
+            $scope.submitMessageFailure = false;            
+          }, 1500);
         }
       };
 
