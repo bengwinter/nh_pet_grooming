@@ -65,7 +65,7 @@ angular
         }, {
             "name": "Tumblr",
             "icon": "fa-tumblr", 
-            "href": "https://www.tumblr.com",
+            "href": "http://newtonhighlandsgrooming.tumblr.com/",
             "target": "_blank"
         }];  
 
