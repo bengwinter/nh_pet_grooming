@@ -19,11 +19,19 @@ angular
         TextLookupService.getText('main.json').success(function(data) { 
           $scope.galleryImages = data["gallery"];
           $scope.legal = data["legal"];
+          
+
+          // $scope.galleryImageWidthTrue = 0;
+          // for (j = 0; j < $scope.galleryImages.length; j++) { 
+          //   var targetImage = new Image();
+          //   targetImage.src = $scope.galleryImages[j].src;
+          //   $scope.galleryImageWidthTrue += (targetImage.width);
+          // };
         });
         
 
         //total width of images below plus the 5px margin on each side which is 490
-        // $scope.originalGalleryImageWidth = 32597 + 490;
+        // $scope.originalGalleryImageWidth = 16749 + 240;
         
         // if (angular.element(window).width() <= 992) {
         //   $scope.galleryImageWidth = $scope.originalGalleryImageWidth * (1/2);
@@ -36,15 +44,12 @@ angular
         // 16789.5px
 
 
-        //used to figure out full width of the images...only needs to be run if the images change and need to update value above
-        // $scope.galleryImageWidthTrue = 0;
-        // for (j = 0; j < $scope.galleryImages.length; j++) { 
-        //   var targetImage = new Image();
-        //   targetImage.src = $scope.galleryImages[j];
-        //   $scope.galleryImageWidthTrue += (targetImage.width);
-        // };
 
-        // angular.element('.slidebox-content').width($scope.galleryImageWidth);
+
+        //used to figure out full width of the images...only needs to be run if the images change and need to update value above
+
+
+        angular.element('.slidebox-content').width($scope.galleryImageWidth);
 
         $scope.contactIcons = [
           {
