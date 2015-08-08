@@ -149,7 +149,7 @@ angular
           origin: origin};
 
           var message = {
-            to: 'info@julycamp.com',
+            to: 'jane@newtonhighlandsgrooming.com',
             from: contactEmail,
             data : data
            };
