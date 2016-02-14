@@ -134,45 +134,77 @@ angular
 
       $scope.sendContactForm = function() {
         $scope.$broadcast('show-errors-check-validity');
+        var formEl = $('#nh-pet-contact-form');
+        var submitButton = $('input[type=submit]', formEl);
+        var formData = formEl.serialize();
 
         if ($scope.form.contact.$valid) {
-          // debugger;
-          var contactEmail = $scope.form.contact.email.$viewValue;
-          var contactName = $scope.form.contact.name.$viewValue;
-          var contactMessage = $scope.form.contact.message.$viewValue;
-      
-          var origin = location.origin;
+          $.ajax({
+            type: 'POST',
+            url: formEl.prop('action'),
+            accept: {
+              javascript: 'application/javascript'
+            },
+            data: formData,
+            beforeSend: function() {
+              submitButton.prop('disabled', 'disabled');
+            }
+          }).done(function(data) {
+            submitButton.prop('disabled', false);
+          });
 
-          var data = {email: contactEmail, 
-          name: contactName, 
-          message: contactMessage, 
-          origin: origin};
-
-          var message = {
-            to: 'jane@newtonhighlandsgrooming.com',
-            from: contactEmail,
-            data : data
-           };
-
-          $.post('/contact/send', message, function(res) { 
-
-           }).error(function(xhr) { 
-              $scope.submitMessage = "There was an error sending your message. Please try again."
-              $scope.submitMessageFailure = true;
-           });
-
-          
-          $scope.$broadcast('show-errors-reset');
-          $scope.contact = { name: '', email: '', message: ''};
-          $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
-          $scope.submitMessageSuccess = true;
+            $scope.$broadcast('show-errors-reset');
+            $scope.contact = { name: '', email: '', message: ''};
+            $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 1-2 business days."
+            $scope.submitMessageSuccess = true;
+        }
+            
 
           setTimeout(function(){ 
             $scope.submitMessage = '';
             $scope.submitMessageSuccess = false;
             $scope.submitMessageFailure = false;            
-          }, 1500);
-        }
+          }, 2500);
+        // $scope.$broadcast('show-errors-check-validity');
+
+        // if ($scope.form.contact.$valid) {
+        //   // debugger;
+        //   var contactEmail = $scope.form.contact.email.$viewValue;
+        //   var contactName = $scope.form.contact.name.$viewValue;
+        //   var contactMessage = $scope.form.contact.message.$viewValue;
+      
+        //   var origin = location.origin;
+
+        //   var data = {email: contactEmail, 
+        //   name: contactName, 
+        //   message: contactMessage, 
+        //   origin: origin};
+
+        //   var message = {
+        //     to: 'jane@newtonhighlandsgrooming.com',
+        //     from: contactEmail,
+        //     data : data
+        //    };
+
+        //   $.post('/contact/send', message, function(res) { 
+
+        //    }).error(function(xhr) { 
+        //       $scope.submitMessage = "There was an error sending your message. Please try again."
+        //       $scope.submitMessageFailure = true;
+        //    });
+
+          
+        //   $scope.$broadcast('show-errors-reset');
+        //   $scope.contact = { name: '', email: '', message: ''};
+        //   $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 5-7 business days."
+        //   $scope.submitMessageSuccess = true;
+
+        //   setTimeout(function(){ 
+        //     $scope.submitMessage = '';
+        //     $scope.submitMessageSuccess = false;
+        //     $scope.submitMessageFailure = false;            
+        //   }, 1500);
+        // }
       };
 
       initializePage();
