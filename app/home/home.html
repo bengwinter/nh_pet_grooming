@@ -99,14 +99,14 @@
         <div class="col-sm-5 col-xs-12 input-container">
           <div class="form-group" show-errors>
             <input type="text" class="form-control" placeholder="NAME" name="data[Name]" ng-model="contact.name" required></input>
-            <p class="help-block" ng-if="form.contact.name.$error.required">Please provide your name</p>
+            <p class="help-block" ng-if="form.contact['data[Name]'].$error.required">Please provide your name</p>
           </div>
         </div>
         <div class="col-sm-7 col-xs-12 input-container">
           <div class="form-group" show-errors>
             <input type="email" class="form-control" name="from" ng-model="contact.email"  placeholder="EMAIL ADDRESS" required></input>
-            <p class="help-block" ng-if="form.contact.email.$error.required">An email address is required</p>
-            <p class="help-block" ng-if="form.contact.email.$error.email">Please enter a valid email address</p>
+            <p class="help-block" ng-if="form.contact.from.$error.required">An email address is required</p>
+            <p class="help-block" ng-if="form.contact.from.$error.email">Please enter a valid email address</p>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@
             <textarea class="form-control" name="data[Message]" ng-model="contact.message" placeholder="MESSAGE" required></textarea>
           </div>
           <div class="col-xs-12">
-            <p class="help-block" ng-if="form.contact.message.$error.required">Please provide a message</p>
+            <p class="help-block" ng-if="form.contact['data[Message]'].$error.required">Please provide a message</p>
           </div>
         </div>
       </div>
