@@ -137,9 +137,9 @@ angular
         var formEl = $('#nh-pet-contact-form');
         var formData = formEl.serialize();
 
-        $.post('http://thebigflamingo.com/contact/send', formData, function(response) { 
-          console.log(response);         
-        });
+        // $.post('http://thebigflamingo.com/contact/send', formData, function(response) { 
+        //   console.log(response);         
+        // });
 
         $scope.$broadcast('show-errors-reset');
         $scope.contact = { name: '', email: '', message: ''};
